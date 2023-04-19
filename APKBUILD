@@ -2,7 +2,7 @@
 # Kernel config based on: arch/arm64/configs/(CHANGEME!)
 
 pkgname=linux-xiaomi-raphael
-pkgver=4.14.268
+pkgver=5.19.0
 pkgrel=0
 pkgdesc="Xiaomi Redmi K20 Pro kernel fork"
 arch="aarch64"
@@ -19,14 +19,15 @@ makedepends="
 	flex
 	openssl-dev
 	perl
+	
 "
 
 # Source
-_repository="android_kernel_xiaomi_sm8150"
- _commit="253c17d93abaca5d4a3269a72588f547b4b81339"
+_repository="linux"
+ _commit="70a6ca9dc4910fe03a7be3473c907901168822b0"
 _config="config-$_flavor.$arch"
 source="
-	$pkgname-$_commit.tar.gz::https://github.com/Laulan56/$_repository/archive/$_commit.tar.gz
+	$pkgname-$_commit.tar.gz::https://github.com/sm8150-mainline/$_repository/archive/$_commit.tar.gz
 	$_config
 "
 builddir="$srcdir/$_repository-$_commit"
