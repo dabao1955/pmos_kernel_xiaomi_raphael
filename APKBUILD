@@ -19,7 +19,6 @@ makedepends="
 	flex
 	openssl-dev
 	perl
-	
 "
 
 # Source
